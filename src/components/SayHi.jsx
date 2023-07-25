@@ -1,16 +1,17 @@
 import React from 'react'
 import { Button } from './Button'
+import { GradientStrokeButton } from './GradientStrokeButton'
 
 export default function SayHi() {
   return (
     <div className="flex flex-col lg:flex-row">
-        <div className='pr-0 py-2 lg:pr-2 w-full'>
-        <Button href="/contact" className={"!w-full !px-10 !py-8 font-display !text-lg md:!text-3xl border border-blue-600 hover:bg-blue-900/20"}>
-            <div className='w-full flex gap-2 justify-between'>
-            <div>hi@branym.com</div>
-            <div>➞</div>
-            </div>
-        </Button>
+        <div className='pr-0 z-10 py-2 lg:pr-2 w-full'>
+            <GradientStrokeButton href="/contact" className={"!w-full !px-10 !py-8 font-display !text-lg md:!text-3xl border border-blue-600 hover:bg-blue-900/20"}>
+                <div className='w-full flex gap-2 justify-between'>
+                <div>hi@branym.com</div>
+                <div>➞</div>
+                </div>
+            </GradientStrokeButton>
         </div>
         <div className='pr-0 py-2 lg:pl-2 w-full'>
         <Button href="/contact" className={"!w-full !px-10 !py-8 font-display !text-lg md:!text-2xl border"}>

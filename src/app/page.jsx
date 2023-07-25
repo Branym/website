@@ -233,9 +233,9 @@ export default async function Home() {
 
       <Container className="lg:text-center">
         <FadeIn className="max-w-6xl mx-auto">
-          <div className='flex justify-center mb-8'>
+          <div className='flex lg:justify-center mb-8'>
             <GradientStroke className={"!rounded-full"}>
-              <div className='text-white py-1 px-24 bg-gray-900 rounded-full'>
+              <div className='text-white p-1 px-12 lg:px-24 bg-neutral-900 rounded-full'>
                 Welcome to Branym Technologies
               </div>
             </GradientStroke>

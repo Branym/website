@@ -9,7 +9,7 @@ export function GradientStrokeButton({ invert, href, className, children, ...pro
 
   return (
     <div className='relative bg-gradient-to-r from-blue-500 to-indigo-700 p-px rounded-lg'>
-      <div className='absolute h-full w-full top-0 left-0 -z-10 scale-110 blur-2xl opacity-60 bg-gradient-to-r from-blue-500 to-indigo-700 p-px rounded-lg'></div>
+      <div className='absolute h-full w-full top-0 left-0 -z-10 scale-110 blur-xl opacity-40 bg-gradient-to-r from-blue-500 to-indigo-700 p-px rounded-lg'></div>
       {href ? <Link href={href} className={className} {...props}>
         {children}
       </Link> : <button className={className} {...props}>
