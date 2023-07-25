@@ -43,20 +43,7 @@ function TextInput({ label, ...props }) {
 export default function ContactForm() {
     return (
       <FadeIn className="lg:order-last">
-        <form  data-netlify="true" method='POST' name="contact" onSubmit={(event) => {
-            event.preventDefault();
-          
-            const myForm = event.target;
-            const formData = new FormData(myForm);
-            
-            fetch("/", {
-              method: "POST",
-              headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: new URLSearchParams(formData).toString(),
-            })
-              .then(() => console.log("Form successfully submitted"))
-              .catch((error) => alert(error));
-        }}>
+        <form  data-netlify="true" method='POST' name="contact">
           <h2 className="font-display text-base font-semibold text-neutral-950">
             Work inquiries
           </h2>
