@@ -20,6 +20,7 @@ import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
+import SayHi from './SayHi'
 
 const RootLayoutContext = createContext({})
 
@@ -59,19 +60,19 @@ function Header({
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
         >
-          <Logomark
-            className="h-10 sm:hidden"
+          {/* <Logomark
+            className="h-10"
             invert={true}
             filled={logoHovered}
-          />
+          /> */}
           <Logo
-            className="hidden h-10 sm:block"
+            className="h-10"
             invert={true}
             filled={logoHovered}
           />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="/contact" invert={true}>
+          <Button href="/contact" className={"hidden sm:block"} invert={true}>
             Contact us
           </Button>
           <button
@@ -99,9 +100,9 @@ function Header({
   )
 }
 
-function NavigationRow({ children }) {
+function NavigationRow({ children, className }) {
   return (
-    <div className="even:mt-px sm:bg-neutral-950">
+    <div className={clsx("even:mt-px sm:bg-neutral-950", className)}>
       <Container>
         <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
       </Container>
@@ -131,6 +132,12 @@ function Navigation() {
       <NavigationRow>
         <NavigationItem href="/process">Our Process</NavigationItem>
         <NavigationItem href="/blog">Blog</NavigationItem>
+      </NavigationRow>
+      <NavigationRow className={"border-t border-neutral-800"}>
+        <NavigationItem href="/work">
+              hi@branym.com
+        </NavigationItem>
+        <SocialMedia className="" invert />
       </NavigationRow>
     </nav>
   )
@@ -205,26 +212,8 @@ function RootLayoutInner({ children, invert }) {
               />
             </div>
             <Navigation />
-            <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
-              <Container>
-                <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
-                  <div>
-                    <h2 className="font-display text-base font-semibold text-white">
-                      Our offices
-                    </h2>
-                    <Offices
-                      invert
-                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
-                    />
-                  </div>
-                  <div className="sm:border-l sm:border-transparent sm:pl-16">
-                    <h2 className="font-display text-base font-semibold text-white">
-                      Follow us
-                    </h2>
-                    <SocialMedia className="mt-6" invert />
-                  </div>
-                </div>
-              </Container>
+            <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800 py-16">
+             
             </div>
           </motion.div>
         </motion.div>

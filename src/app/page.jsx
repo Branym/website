@@ -19,11 +19,14 @@ import tagglabsLogo from '@/images/clients/tagglabs.png'
 import zuloLogo from '@/images/clients/zulo.png'
 
 import imageLaptop from '@/images/laptop.jpg'
+import featureImage from '@/images/feature_art.jpg'
 
 
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 import { Button } from '@/components/Button'
 import clsx from 'clsx'
+import { GradientStrokeButton } from '@/components/GradientStrokeButton'
+import { GradientStroke } from '@/components/GradientStroke'
 
 const clients = [
   ['Co-Founders Planet', cofoundersLogo, 'w-64'],
@@ -69,7 +72,7 @@ async function Banner() {
         <div className="relative lg:col-span-7 xl:absolute xl:inset-0 xl:left-1/3 xl:mr-0">
           <Image
             className=" w-full object-contain xl:object-cover object-right-bottom xl:object-right-top lg:aspect-auto sm:h-[28rem] lg:h-full"
-            src={banner.thumbnail}
+            src={featureImage}
             alt=""
             unoptimized
           />
@@ -230,6 +233,13 @@ export default async function Home() {
 
       <Container className="lg:text-center">
         <FadeIn className="max-w-6xl mx-auto">
+          <div className='flex justify-center mb-8'>
+            <GradientStroke className={"!rounded-full"}>
+              <div className='text-white py-1 px-24 bg-gray-900 rounded-full'>
+                Welcome to Branym Technologies
+              </div>
+            </GradientStroke>
+          </div>
           <h1 className="font-display text-4xl font-extrabold tracking-tight text-white [text-wrap:balance] sm:text-7xl">
             Great Experience Design can boost your Business upto 35%
           </h1>
@@ -237,8 +247,13 @@ export default async function Home() {
           Studies show that a great customer experience has the potential to boost your business by up to 35%. Invest in creating memorable interactions that foster loyalty, satisfaction, and growth.
           </p>
           <div className='flex gap-2 lg:justify-center py-6 mx-auto'>
-            <Button invert className="py-3 px-6">See Our Work</Button>
-            <Button className="py-3 px-6">Contact Us</Button>
+            {/* <Button invert className="py-3 px-6">See Our Work</Button> */}
+            <GradientStrokeButton className="py-4">
+              <div className='flex items-center gap-x-4'>
+                <div>See Our Work</div>
+                <div>➞</div>
+              </div>
+            </GradientStrokeButton>
           </div>
         </FadeIn>
       </Container>

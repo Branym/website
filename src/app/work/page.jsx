@@ -32,20 +32,20 @@ function CaseStudies({ caseStudies }) {
         {caseStudies.map((caseStudy) => (
           <FadeIn key={caseStudy.client}>
             <article>
-              <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
-                <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
+              <div className="grid grid-cols-4 gap-x-8 items-center gap-y-8 pt-16">
+                <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-2 lg:block">
                   <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
                     <Image
-                      src={caseStudy.logo}
+                      src={caseStudy.thumbnail}
                       alt=""
-                      className="h-16 w-16 flex-none"
+                      className="h-full w-full rounded-xl aspect-[1/1] flex-none"
                       unoptimized
                     />
-                    <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
+                    {/* <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
                       {caseStudy.client}
-                    </h3>
+                    </h3> */}
                   </div>
-                  <div className="mt-1 flex gap-x-4 sm:mt-0 lg:block">
+                  {/* <div className="mt-1 flex gap-x-4 sm:mt-0 lg:block">
                     <p className="text-sm tracking-tight text-neutral-950 after:ml-4 after:font-semibold after:text-neutral-300 after:content-['/'] lg:mt-2 lg:after:hidden">
                       {caseStudy.service}
                     </p>
@@ -54,7 +54,7 @@ function CaseStudies({ caseStudies }) {
                         {formatDate(caseStudy.date)}
                       </time>
                     </p>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
                   <p className="font-display text-4xl font-medium text-neutral-950">
@@ -82,7 +82,7 @@ function CaseStudies({ caseStudies }) {
                     </Blockquote>
                   )}
                 </div>
-              </Border>
+              </div>
             </article>
           </FadeIn>
         ))}

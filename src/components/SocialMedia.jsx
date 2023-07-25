@@ -70,18 +70,18 @@ export function SocialMedia({ className, invert = false }) {
     <ul
       role="list"
       className={clsx(
-        'flex gap-x-10',
+        'flex items-center group relative isolate -mx-6 sm:mx-0 bg-neutral-950 sm:even:mt-0 sm:even:border-l border-t border-neutral-800 sm:even:border-neutral-800',
         invert ? 'text-white' : 'text-neutral-950',
         className
       )}
     >
       {socialMediaProfiles.map((socialMediaProfile) => (
-        <li key={socialMediaProfile.title}>
+        <li className=' border-neutral-800 h-full border-r' key={socialMediaProfile.title}>
           <Link
             href={socialMediaProfile.href}
             aria-label={socialMediaProfile.title}
             className={clsx(
-              'transition',
+              'transition px-4 lg:px-16 py-6 cursor-pointer hover:bg-neutral-900 h-full flex items-center',
               invert ? 'hover:text-neutral-200' : 'hover:text-neutral-700'
             )}
           >

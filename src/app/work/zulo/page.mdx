@@ -1,34 +1,7 @@
-import logo from '@/images/clients/family-fund/logomark-dark.svg'
-import imageHero from './hero.jpg'
-import thumbnail from './thumbnail.jpg'
-import imageDebraFiscal from './debra-fiscal.jpeg'
-
-export const caseStudy = {
-  client: 'FamilyFund',
-  title: 'Designing an OTT Platform to enthrall the audience',
-  description:
-    'FamilyFund is a crowdfunding platform for friends and family. Allowing users to take personal loans from their network without a traditional financial institution.',
-  summary: [
-    'FamilyFund is a crowdfunding platform for friends and family. Allowing users to take personal loans from their network without a traditional financial institution.',
-    'We developed a custom CMS to power their blog with and optimised their site to rank higher for the keywords “Gary Vee” and “Tony Robbins”.',
-  ],
-  logo,
-  featured: true,
-  thumbnail: thumbnail,
-  image: { src: imageHero },
-  date: '2023-01',
-  service: 'Web development, CMS',
-  testimonial: {
-    author: { name: 'Debra Fiscal', role: 'CEO of FamilyFund' },
-    content:
-      'Working with Studio, we felt more like a partner than a customer. They really resonated with our mission to change the way people convince their parents to cash out their pensions.',
-  },
-}
-
-export const metadata = {
-  title: `${caseStudy.client} Case Study`,
-  description: caseStudy.description,
-}
+import {caseStudy, metadata} from './data.jsx'
+export {caseStudy, metadata}
+import clientImage from './client.jpg'
+import review from './review.json';
 
 ## Overview
 
@@ -43,24 +16,20 @@ To optimise their search traffic we used an innovative technique. Every post has
 ## What we did
 
 <TagList>
-  <TagListItem>Frontend (Next.js)</TagListItem>
-  <TagListItem>Custom CMS</TagListItem>
-  <TagListItem>SEO</TagListItem>
-  <TagListItem>Infrastructure</TagListItem>
+  {caseStudy.services.map((item, index) =><TagListItem key={index}>{item}</TagListItem>)}
 </TagList>
 
 <Blockquote
-  author={{ name: 'Debra Fiscal', role: 'CEO of FamilyFund' }}
-  image={{ src: imageDebraFiscal }}
+  className="mt-16"
+  author={{ name: review.author.name, role: review.author.role }}
+  image={{ src: clientImage }}
 >
-  Working with Studio, we felt more like a partner than a customer. They really
-  resonated with our mission to change the way people convince their parents to
-  cash out their pensions.
+  {review.content}
 </Blockquote>
 
-<StatList>
+{/* <StatList>
   <StatListItem value="25%" label="Less traffic" />
   <StatListItem value="10x" label="Page load times" />
   <StatListItem value="15%" label="Higher infra costs" />
   <StatListItem value="$1.2M" label="Legal fees" />
-</StatList>
+</StatList> */}

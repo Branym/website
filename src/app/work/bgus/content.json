@@ -1,0 +1,13 @@
+{
+    "client": "Clynk Media Works",
+    "title": "Designing an OTT Platform to enthrall the audience",
+    "description":"An over-the-top (OTT) video streaming app that offers exclusive content to the audience.",
+    "summary": [
+        "An over-the-top (OTT) video streaming app that offers exclusive content to its users. ", 
+        "The project aimed to create an intuitive and engaging interface for users to browse and access the app's content seamlessly."
+    ],
+    "featured": true,
+    "year": 2019,
+    "month": "09",
+    "services": ["UI/UX Design", "Prototyping", "Presentation"]
+}

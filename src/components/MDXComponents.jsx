@@ -8,7 +8,7 @@ import { TagList, TagListItem } from '@/components/TagList'
 
 export const MDXComponents = {
   Blockquote({ className, ...props }) {
-    return <Blockquote className={clsx('my-32', className)} {...props} />
+    return <Blockquote className={clsx('', className)} {...props} />
   },
   img: function Img({ className, ...props }) {
     return (
