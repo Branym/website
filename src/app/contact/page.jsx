@@ -47,7 +47,7 @@ function RadioInput({ label, ...props }) {
 function ContactForm() {
   return (
     <FadeIn className="lg:order-last">
-      <form>
+      <form netlify>
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Work inquiries
         </h2>
