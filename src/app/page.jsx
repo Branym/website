@@ -229,7 +229,7 @@ export default async function Home() {
 
   return (
     <>
-    <div className='pt-24 sm:pt-32 md:pt-48'>
+    <div className='pt-12 sm:pt-32 md:pt-48'>
 
       <Container className="lg:text-center">
         <FadeIn className="max-w-6xl mx-auto">
