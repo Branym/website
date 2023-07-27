@@ -193,7 +193,7 @@ export default async function Home() {
         <FadeIn className="max-w-6xl mx-auto">
           <div className='flex lg:justify-center mb-8'>
             <GradientStroke className={"!rounded-full"}>
-              <div className='text-white p-1 px-12 lg:px-24 bg-neutral-900 rounded-full'>
+              <div className='text-white text-center p-1 px-8 xs:px-12 lg:px-24 bg-neutral-900 overflow-hidden h-9 rounded-full'>
                 Welcome to Branym Technologies
               </div>
             </GradientStroke>
