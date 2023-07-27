@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -28,6 +29,12 @@ module.exports = {
           { fontVariationSettings: '"wdth" 125' },
         ],
       },
+      colors: {
+        neutral: {
+          ...colors.neutral,
+          950: "black"
+        }
+      }
     },
   },
   plugins: [

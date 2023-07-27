@@ -48,15 +48,16 @@ export default async function BlogArticleWrapper({ children, _segments }) {
 
       <div className='bg-white'>
 
-      {moreArticles.length > 0 && (
-        <PageLinks
-          className=""
-          title="More articles"
-          pages={moreArticles}
-        />
-      )}
+          {moreArticles.length > 0 && (
+            <PageLinks
+              className=""
+              title="More articles"
+              pages={moreArticles}
+            />
+          )}
 
-      <ContactSection />
+          <ContactSection />
+
       </div>
     </>
   )

@@ -7,14 +7,16 @@ import { StatList, StatListItem } from '@/components/StatList'
 import { TagList, TagListItem } from '@/components/TagList'
 
 export const MDXComponents = {
-  Blockquote({ className, ...props }) {
-    return <Blockquote className={clsx('', className)} {...props} />
+  blockquote({ className,children, ...props }) {
+    return <blockquote className={clsx(className, 'p-8 lg:p-12 bg-neutral-950 text-white rounded-xl font-bold lg:text-2xl mt-12')}>
+      {children}
+    </blockquote>
   },
   img: function Img({ className, ...props }) {
     return (
       <div
         className={clsx(
-          'group isolate my-10 overflow-hidden rounded-4xl bg-neutral-100 max-sm:-mx-6',
+          'group isolate my-10 overflow-hidden rounded-xl bg-neutral-100 max-sm:-mx-6',
           className
         )}
       >

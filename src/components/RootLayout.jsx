@@ -134,7 +134,7 @@ function Navigation() {
         <NavigationItem href="/blog">Blog</NavigationItem>
       </NavigationRow>
       <NavigationRow className={"border-t border-neutral-800"}>
-        <NavigationItem href="/work">
+        <NavigationItem href="mailto:hi@branym.com">
               hi@branym.com
         </NavigationItem>
         <SocialMedia className="" invert />

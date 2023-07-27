@@ -2,42 +2,27 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { ContactSection } from '@/components/ContactSection'
-import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 
-import cofoundersLogo from '@/images/clients/cofounders.png'
-import bgusLogo from '@/images/clients/bgus.png'
-import clynkLogo from '@/images/clients/clynk.png'
-import education10xLogo from '@/images/clients/education10x.png'
-import jauracoLogo from '@/images/clients/jauraco.png'
-import polarisLogo from '@/images/clients/polaris.png'
-import tagglabsLogo from '@/images/clients/tagglabs.png'
-import zuloLogo from '@/images/clients/zulo.png'
 
 import imageLaptop from '@/images/laptop.jpg'
 import featureImage from '@/images/feature_art.jpg'
-
 
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 import { Button } from '@/components/Button'
 import clsx from 'clsx'
 import { GradientStrokeButton } from '@/components/GradientStrokeButton'
 import { GradientStroke } from '@/components/GradientStroke'
+import { Container } from '@/components/Container'
+import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 
-const clients = [
-  ['Co-Founders Planet', cofoundersLogo, 'w-64'],
-  ['BG Unified Solutions', bgusLogo, 'w-[8rem]'],
-  ['Zulo', zuloLogo, 'w-28'],
-  ['Education10x', education10xLogo, 'w-56'],
-  ['Jauraco Fine Jewels', jauracoLogo, 'w-56'],
-  ['Clynk Mediaworks', clynkLogo, 'w-[9rem]'],
-  ['Polaris Medifabrics', polarisLogo, 'w-48'],
-  ['Tagglabs', tagglabsLogo, 'w-48'],
-]
+import gauravProfile from '@/images/profile/gaurav.jpg'
+import Clients from '@/components/Clients'
+
 
 async function Banner() {
   
@@ -62,9 +47,11 @@ async function Banner() {
             An app that offers exclusive content to its users. The project aimed to create an intuitive and engaging interface for users to browse and access the ...
             </p> */}
             <div className="flex items-center gap-x-6 xl:mt-8 xl:mb-64">
-              <a href="#" className="text-md font-semibold leading-6 text-white">
-                Read more <span aria-hidden="true">→</span>
-              </a>
+              <Link passHref href="/work/zulo">
+                <div href="#" className="text-md font-semibold leading-6 text-white hover:text-blue-500">
+                  Read more <span aria-hidden="true">→</span>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -85,46 +72,17 @@ async function Banner() {
   )
 }
 
-function Clients() {
-  return (
-    <div className="rounded-4xl py-12 sm:py-16">
-      <Container>
-        <FadeIn className="lg:hidden flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider sm:text-left">
-            We’ve worked with hundreds of amazing people
-          </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
-        </FadeIn>
-        <FadeInStagger faster>
-          <ul
-            role="list"
-            className="mt-10 grid items-center justify-items-center grid-cols-2 gap-x-8 gap-y-16 lg:grid-cols-4 lg:mt-16"
-          >
-            {clients.map(([client, logo, classes]) => (
-              <li key={client} className=''>
-                <FadeIn className="">
-                  <Image src={logo} alt={client} className={clsx('object-contain scale-[0.9] transition duration-700 hover:scale-[0.95] cursor-pointer', classes)} unoptimized />
-                </FadeIn>
-              </li>
-            ))}
-          </ul>
-        </FadeInStagger>
-      </Container>
-    </div>
-  )
-}
+
 
 function CaseStudies({ caseStudies }) {
   return (
     <>
       <SectionIntro
-        title="Harnessing technology for a brighter future"
+        title="Our Journey to Creative Brilliance"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
+        For 5 years, we've been a driving force of innovation and quality. Explore our featured works that showcase our pride and passion.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -241,14 +199,14 @@ export default async function Home() {
             </GradientStroke>
           </div>
           <h1 className="font-display text-4xl font-extrabold tracking-tight text-white [text-wrap:balance] sm:text-7xl">
-            Great Experience Design can boost your Business upto 35%
+            Innovative Web Solutions for the Modern Digital Landscape
           </h1>
           <p className="mt-6 text-md mx-auto max-w-4xl text-white">
           Studies show that a great customer experience has the potential to boost your business by up to 35%. Invest in creating memorable interactions that foster loyalty, satisfaction, and growth.
           </p>
           <div className='flex gap-2 lg:justify-center py-6 mx-auto'>
             {/* <Button invert className="py-3 px-6">See Our Work</Button> */}
-            <GradientStrokeButton className="py-4">
+            <GradientStrokeButton href="/work" className="py-4">
               <div className='flex items-center gap-x-4'>
                 <div>See Our Work</div>
                 <div>➞</div>
@@ -269,12 +227,10 @@ export default async function Home() {
 
         <Testimonial
           className="mt-24 sm:mt-32 lg:mt-20"
-          client={{ name: 'Phobia', logo: zuloLogo }}
-          imageClass={'h-12 w-auto'}
+          client={{ name: 'Cofounders Planet', logo: gauravProfile, role: "CEO, Cofounders Planet" }}
+          imageClass={'h-16 w-16 object-cover rounded-full'}
         >
-          The team at Studio went above and beyond with our onboarding, even
-          finding a way to access the user’s microphone without triggering one of
-          those annoying permission dialogs.
+         The unwavering commitment to our vision and goals was truly inspiring. The level of expertise and attention to detail they demonstrated was exceptional, resulting in a remarkable platform.
         </Testimonial>
 
         <CaseStudies caseStudies={caseStudies} />

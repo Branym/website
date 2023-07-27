@@ -6,7 +6,7 @@ import SayHi from './SayHi'
 
 export function ContactSection() {
   return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
+    <Container className="pt-24 sm:pt-32 lg:pt-40">
       <FadeIn className="-mx-6 md:rounded-4xl bg-neutral-950 px-6 py-20 sm:mx-0 sm:py-24 md:px-12">
         <div className="mx-auto max-w-5xl">
           <div className="w-full">

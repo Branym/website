@@ -1,13 +1,17 @@
 {
     "client": "Clynk Media Works",
-    "title": "Designing an OTT Platform to enthrall the audience",
-    "description":"An over-the-top (OTT) video streaming app that offers exclusive content to the audience.",
+    "title": "Designing Cinmetic Moview Posters for a Bollywood Movie",
+    "description":"Visually captivating posters for A feel-good comedy movie",
     "summary": [
-        "An over-the-top (OTT) video streaming app that offers exclusive content to its users. ", 
-        "The project aimed to create an intuitive and engaging interface for users to browse and access the app's content seamlessly."
+        "The goal was to create visually captivating posters that accurately conveyed the essence of the film's story and evoked the right emotions in the audience. "
     ],
     "featured": true,
     "year": 2019,
     "month": "09",
-    "services": ["UI/UX Design", "Prototyping", "Presentation"]
+    "services": ["Graphic Design", "Logo Design", "Branding", "Sketching"],
+    "link": {
+        "url": "https://www.behance.net/gallery/88457245/Unreleased-Movie-Poster",
+        "caption": "View full Project to explore more"
+    }
+
 }

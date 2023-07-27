@@ -9,18 +9,9 @@ import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StatList, StatListItem } from '@/components/StatList'
-import imageAngelaFisher from '@/images/team/angela-fisher.jpeg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpeg'
-import imageBlakeReid from '@/images/team/blake-reid.jpeg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpeg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpeg'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpeg'
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpeg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpeg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpeg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpeg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpeg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpeg'
+
+import imageYuvraj from '@/images/team/yuvraj.jpeg'
+
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 
 function Culture() {
@@ -28,8 +19,7 @@ function Culture() {
     <div className=" rounded-4xl py-4 lg:py-8">
       <SectionIntro
         eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
-        
+        title="Its our passion to bring your passion to life."
       >
         <p>
           We are a group of like-minded people who share the same core values.
@@ -37,17 +27,14 @@ function Culture() {
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" >
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="Deliverability" >
+          We prioritize delivering exceptional results, ensuring that our clients' needs are met with precision and excellence.
           </GridListItem>
-          <GridListItem title="Trust" >
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="Efficiency" >
+          We embrace efficiency in every aspect of our work, maximizing productivity and minimizing wastage of time and resources.
           </GridListItem>
-          <GridListItem title="Compassion" >
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="Innovation" >
+            At at the core of our culture, We foster a creative environment where new ideas flourish, driving groundbreaking solutions.
           </GridListItem>
         </GridList>
       </Container>
@@ -57,75 +44,20 @@ function Culture() {
 
 const team = [
   {
-    title: 'Leadership',
+    title: 'Our Team',
     people: [
       {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
+        name: 'Yuvraj Midha',
+        role: 'Co-Founder',
+        image: { src: imageYuvraj },
       },
       {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
-      },
-      {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
+        name: 'Mahir Gupta',
+        role: 'Co-Founder',
+        image: { src: imageYuvraj },
       },
     ],
-  },
-  {
-    title: 'Team',
-    people: [
-      {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
-      },
-      {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
-      },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
-      {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
-      },
-      {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
-      },
-    ],
-  },
+  }
 ]
 
 function Team() {
@@ -180,7 +112,7 @@ function Team() {
 export const metadata = {
   title: 'About Us',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'Our mission is to provide customer-centric, result-oriented, cost-competitive innovative & functional IT Solutions to our valuable global clients.',
 }
 
 export default async function About() {
@@ -188,34 +120,27 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="About us" title="We build great experiences">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+        Our mission is to provide customer-centric, result-oriented, cost-competitive innovative & functional IT Solutions to our valuable global clients.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            Our team understand the needs and requirements of our customer and make technology to resolve the needs, with the best UX possible for the target audience. We believe to explore new opportunities and technologies that maximizes the business value, consistent growth and sustainability which enables our clients to become more agile and competitive.
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+          With this understanding and skillset, we are helping our clients to bring great products to market in less time and at less cost by collaborating with them in their continued success.
           </p>
         </div>
       </PageIntro>
-      <div className='bg-white pt-24 sm:pt-32 lg:pt-40'>
-      {/* <Container className="pt-16">
+      <div className='bg-white pt-16 sm:pt-20 lg:pt-24'>
+      <Container className="pb-16">
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
+          <StatListItem value="40+" label="Projects Completed" />
+          <StatListItem value="5+" label="Years of Experience" />
+          <StatListItem value="20+" label="Satisfied Clients" />
         </StatList>
-      </Container> */}
+      </Container>
 
       <Culture />
 

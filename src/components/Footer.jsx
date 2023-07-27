@@ -9,7 +9,7 @@ const navigation = [
   {
     title: 'Work',
     links: [
-      { title: 'Zull OTT', href: '/work/zulo' },
+      { title: 'Zulo OTT', href: '/work/zulo' },
       { title: 'CoFounders Planet', href: '/work/cfplanet' },
       { title: 'BG Unified Solutions', href: '/work/bgus' },
       {
@@ -21,6 +21,7 @@ const navigation = [
         href: '/work',
       },
     ],
+    target: ""
   },
   {
     title: 'Company',
@@ -30,9 +31,12 @@ const navigation = [
       { title: 'Blog', href: '/blog' },
       { title: 'Contact us', href: '/contact' },
     ],
+    target: ""
+    
   },
   {
     title: 'Connect',
+    target: "_blank",
     links: socialMediaProfiles,
   },
 ]
@@ -51,6 +55,7 @@ function Navigation() {
                 <li key={link.title} className="mt-4">
                   <Link
                     href={link.href}
+                    target={section.target}
                     className="transition hover:text-neutral-950"
                   >
                     {link.title}

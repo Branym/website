@@ -6,7 +6,7 @@ export default function SayHi() {
   return (
     <div className="flex flex-col lg:flex-row">
         <div className='pr-0 z-10 py-2 lg:pr-2 w-full'>
-            <GradientStrokeButton href="/contact" className={"!w-full !px-10 !py-8 font-display !text-lg md:!text-3xl border border-blue-600 hover:bg-blue-900/20"}>
+            <GradientStrokeButton href="mailto:hi@branym.com" className={"!w-full !px-10 !py-8 font-display !text-lg md:!text-3xl border border-blue-600 hover:bg-blue-900/20"}>
                 <div className='w-full flex gap-2 justify-between'>
                 <div>hi@branym.com</div>
                 <div>➞</div>
@@ -14,7 +14,7 @@ export default function SayHi() {
             </GradientStrokeButton>
         </div>
         <div className='pr-0 py-2 lg:pl-2 w-full'>
-        <Button href="/contact" className={"!w-full !px-10 !py-8 font-display !text-lg md:!text-2xl border"}>
+        <Button href="tel:+917087362779" className={"!w-full !px-10 !py-8 font-display !text-lg md:!text-2xl border"}>
             <div className='w-full flex gap-6 items-center'>
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -22,7 +22,6 @@ export default function SayHi() {
                 </svg>
             </div>
             <div>+91 7087362779</div>
-            
             </div>
         </Button>
         </div>

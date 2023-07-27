@@ -1,13 +1,18 @@
 {
-    "client": "Clynk Media Works",
-    "title": "Designing an OTT Platform to enthrall the audience",
-    "description":"An over-the-top (OTT) video streaming app that offers exclusive content to the audience.",
+    "client": "BG Unified Solutions",
+    "title": "Developing a modern website for a Hosting Solutions Enterprise",
+    "description":"A redesign for a corporate website for a company that offers 40+ cloud solutions and have over 50+ customer stories.",
     "summary": [
-        "An over-the-top (OTT) video streaming app that offers exclusive content to its users. ", 
-        "The project aimed to create an intuitive and engaging interface for users to browse and access the app's content seamlessly."
+        "We were thrilled and little nervous when we got this project to design the official website of BG Unified Solutions", 
+        "Our team worked closely with BG Unified Solutions to create a website that effectively showcases their services and expertise."
     ],
     "featured": true,
-    "year": 2019,
+    "year": 2020,
     "month": "09",
-    "services": ["UI/UX Design", "Prototyping", "Presentation"]
+    "services": ["UI/UX Design", "Prototyping", "Development", "Testing", "Maintainence"],
+    "link": {
+        "url": "https://bgunifiedsolutions.net",
+        "caption": "Visit the official website to explore more"
+    }
+
 }

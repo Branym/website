@@ -1,3 +1,4 @@
+import { Blockquote } from '@/components/Blockquote'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
@@ -5,6 +6,8 @@ import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
 import { MDXComponents } from '@/components/MDXComponents'
 import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
+import { TagList, TagListItem } from '@/components/TagList'
+import ViewProject from '@/components/ViewProject'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 
 export default async function CaseStudyLayout({ children, _segments }) {
@@ -17,14 +20,14 @@ export default async function CaseStudyLayout({ children, _segments }) {
 
   return (
     <>
-      <article className="mt-24 sm:mt-32 lg:mt-40">
+      <article className="">
         <header>
           <PageIntro eyebrow="Case Study" title={caseStudy.title} centered>
             <p>{caseStudy.description}</p>
           </PageIntro>
 
           <FadeIn>
-            <div className="mt-24 border-t border-neutral-200 bg-white/5 sm:mt-32 lg:mt-40">
+            <div className="mt-24 border-t border-neutral-200  sm:mt-32 lg:mt-40">
               <Container>
                 <div className="mx-auto max-w-5xl">
                   <dl className="-mx-6 grid grid-cols-1 text-sm text-white sm:mx-0 sm:grid-cols-3">
@@ -63,16 +66,37 @@ export default async function CaseStudyLayout({ children, _segments }) {
           </FadeIn>
         </header>
 
-        <div className='bg-white pt-24 sm:pt-32 lg:pt-40'>
-        <Container className="">
-          <FadeIn>
-            <MDXComponents.wrapper>{children}</MDXComponents.wrapper>
-          </FadeIn>
-        </Container>
+        <div className='bg-white pt-12 sm:pt-16 lg:pt-20'>
+          <Container className="">
+            <FadeIn>
+              <MDXComponents.wrapper>
+                {caseStudy?.link &&  <ViewProject
+                  link={caseStudy.link?.url}
+                  caption={caseStudy.link?.caption}
+                />}
+                {children}
+                <div className='typography'>
+                  <h2 className=''>What we did</h2>
+                </div>
+                {caseStudy?.services && <TagList>
+                  {caseStudy?.services.map((item, index) =><TagListItem key={index}>{item}</TagListItem>)}
+                </TagList>}
+                {caseStudy?.testimonial && <Blockquote
+                  className="mt-16 max-w-3xl mx-auto"
+                  author={caseStudy?.testimonial.author}
+                  image={{ src: caseStudy.clientImage }}
+                >
+                  {caseStudy.testimonial.content}
+                </Blockquote>}
+                
+              </MDXComponents.wrapper>
+            </FadeIn>
+          </Container>
+        
         </div>
       </article>
 
-      <div className='bg-white pt-4 sm:pt-4 lg:pt-8'>
+      <div className='bg-white pt-8 sm:pt-12 lg:pt-16'>
         {moreCaseStudies.length > 0 && (
           <PageLinks
             className=""

@@ -1,13 +1,14 @@
 {
-    "client": "Clynk Media Works",
-    "title": "Designing an OTT Platform to enthrall the audience",
-    "description":"An over-the-top (OTT) video streaming app that offers exclusive content to the audience.",
+    "client": "Bright Champs Pvt. Ltd.",
+    "title": "Prototype for a Website that sells Courses for kids,",
+    "description":"A redesign of a playful website for a company that focuses on financial literacy of kids.",
     "summary": [
-        "An over-the-top (OTT) video streaming app that offers exclusive content to its users. ", 
-        "The project aimed to create an intuitive and engaging interface for users to browse and access the app's content seamlessly."
+        "A finance educational platform, \"Education10x,\" with a target audience of children aged 6-14", 
+        "he primary goal was to create an engaging and visually stimulating website for a platform that teaches financial literacy to young learners in a fun and interactive way."
     ],
+    "year": 2022,
     "featured": true,
-    "year": 2019,
     "month": "09",
-    "services": ["UI/UX Design", "Prototyping", "Presentation"]
+    "services": ["UI/UX Design", "Prototyping", "Logo Design"]
+
 }

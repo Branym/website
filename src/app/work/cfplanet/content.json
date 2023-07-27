@@ -1,13 +1,17 @@
 {
-    "client": "Clynk Media Works",
-    "title": "Designing an OTT Platform to enthrall the audience",
-    "description":"An over-the-top (OTT) video streaming app that offers exclusive content to the audience.",
+    "client": "CoFounders Planet",
+    "title": "A Social Media Web Application to find likeminded enterpreneurs",
+    "description":"A fresh design and SPA Platform, delivering a great experience to explore and connect with people.",
     "summary": [
-        "An over-the-top (OTT) video streaming app that offers exclusive content to its users. ", 
-        "The project aimed to create an intuitive and engaging interface for users to browse and access the app's content seamlessly."
+        "The goal was to create a platform that offers entrepreneurs a place to interact with each other and collaborate with likeminded business entusiasts who share the same vision and goals."
     ],
     "featured": true,
-    "year": 2019,
+    "year": 2021,
     "month": "09",
-    "services": ["UI/UX Design", "Prototyping", "Presentation"]
+    "services": ["UI/UX Design", "Prototyping", "Development", "Testing"],
+    "link": {
+        "url": "https://cofoundersplanet.com",
+        "caption": "Visit the official app to explore more"
+    }
+
 }
