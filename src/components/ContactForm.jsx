@@ -1,7 +1,9 @@
 'use client'
-import React, { useId } from 'react'
+import React, { useEffect, useId, useState } from 'react'
 import { FadeIn } from './FadeIn';
 import { Button } from './Button';
+import { useForm } from '@formspree/react';
+import SuccessMessage from './SuccessMessage';
 
 
 function TextInput({ label, ...props }) {
@@ -40,10 +42,22 @@ function TextInput({ label, ...props }) {
   }
   
 
-export default function ContactForm() {
+export default function ContactForm(){
+
+    const [state, handleSubmit] = useForm('mnqkneyw');
+    const [open, setOpen] = useState(false)
+
+    useEffect(() => {
+        if (state.succeeded) {
+            return setOpen(true)
+        }
+    }, [state])
+
     return (
+    <>
+        <SuccessMessage open={open} setOpen={setOpen} title="Form Submitted" message='We will contact you shortly.' redirect='/contact'/>
       <FadeIn className="lg:order-last">
-        <form  data-netlify="true" method='POST' name="contact">
+        <form onSubmit={handleSubmit}>
           <h2 className="font-display text-base font-semibold text-neutral-950">
             Work inquiries
           </h2>
@@ -80,5 +94,6 @@ export default function ContactForm() {
           </Button>
         </form>
       </FadeIn>
+      </>
     )
   }
