@@ -21,8 +21,8 @@ export function GrayscaleTransitionImage(props) {
   let filter = useMotionTemplate`grayscale(${grayscale})`
 
   return (
-    <div ref={ref} className="group relative">
-      <MotionImage alt="" style={{ filter }} {...props} />
+    <div className="group relative">
+      <MotionImage alt="" {...props} />
       <div
         className="pointer-events-none absolute left-0 top-0 w-full opacity-0 transition duration-300 group-hover:opacity-100"
         aria-hidden="true"
