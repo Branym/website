@@ -11,6 +11,7 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { StatList, StatListItem } from '@/components/StatList'
 
 import imageYuvraj from '@/images/team/yuvraj.jpeg'
+import imageMahir from '@/images/team/mahir.jpg'
 
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 
@@ -54,7 +55,7 @@ const team = [
       {
         name: 'Mahir Gupta',
         role: 'Co-Founder',
-        image: { src: imageYuvraj },
+        image: { src: imageMahir },
       },
     ],
   }
