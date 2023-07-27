@@ -115,7 +115,7 @@ export default async function Work() {
 
         <Testimonial
           className="mt-24 sm:mt-32 lg:mt-20"
-          client={{ name: 'Cofounders Planet', logo: gauravProfile, role: "CEO, Cofounders Planet" }}
+          client={{ name: 'Gaurav Aggarwal', logo: gauravProfile, role: "CEO, Cofounders Planet" }}
           imageClass={'h-16 w-16 object-cover rounded-full'}
         >
          The unwavering commitment to our vision and goals was truly inspiring. The level of expertise and attention to detail they demonstrated was exceptional, resulting in a remarkable platform.
