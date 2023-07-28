@@ -64,6 +64,7 @@ async function Banner() {
             height={800}
             width={650}
             sizes='(max-width: 768px) 100vw, 50vw'
+            priority
           />
         </div>
         
