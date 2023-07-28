@@ -61,7 +61,9 @@ async function Banner() {
             className=" w-full object-contain xl:object-cover object-right-bottom xl:object-right-top lg:aspect-auto sm:h-[28rem] lg:h-full"
             src={featureImage}
             alt=""
-            unoptimized
+            height={800}
+            width={650}
+            sizes='(max-width: 768px) 100vw, 50vw'
           />
         </div>
         
@@ -97,7 +99,9 @@ function CaseStudies({ caseStudies }) {
                       src={caseStudy.thumbnail}
                       alt={caseStudy.client}
                       className="h-full w-full aspect-[1/1] object-cover rounded-[1rem]"
-                      unoptimized
+                      height={592}
+                      width={592}
+                      sizes='(max-width: 1024px) 100vw, 50vw'
                     />
                   </Link>
                 </h3>

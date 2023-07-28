@@ -43,7 +43,14 @@ export default function Clients() {
             {clients.map(([client, logo, classes]) => (
               <li key={client} className=''>
                 <FadeIn className="">
-                  <Image src={logo} alt={client} className={clsx('object-contain scale-[0.9] transition duration-700 hover:scale-[0.95] cursor-pointer', classes)} unoptimized />
+                  <Image 
+                        src={logo} 
+                        alt={client} 
+                        className={clsx('object-contain scale-[0.9] transition duration-700 hover:scale-[0.95] cursor-pointer', classes)}  
+                        height={80}
+                        width={280}
+                        sizes='(max-width:1024px) 50vw, 25vw'
+                    />
                 </FadeIn>
               </li>
             ))}
